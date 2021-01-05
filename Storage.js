@@ -20,7 +20,6 @@ class Storage {
 
   deleteValue(key) {
     // удаляет значение с ключом, возвращает true если такое есть, либо false если нет.
-
     if (!(key in this.DrinkStorage)) {
       return false;
     }
@@ -31,8 +30,6 @@ class Storage {
   reset() {
     // очищает хранящиеся в объекте данные.
     for (var key in this.DrinkStorage) {
-      // this check can be safely omitted in modern JS engines
-      // if (obj.hasOwnProperty(key))
       delete this.DrinkStorage[key];
     }
     return "Complete reset";
